@@ -1,0 +1,19 @@
+<div class="page-bg"></div>
+
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" #f="ngForm" (ngSubmit)="onLogin(f)">
+
+      <input type="text" name="Usuario" ngModel class="form-control" placeholder="Usuario" required autofocus>
+      <input type="password" name="Password" ngModel class="form-control" placeholder="Contraseña" required>
+      <button class="btn btn-primary">Iniciar Sesion</button>
+    </form>
+    <!-- /form -->
+    <div class="customHr">.</div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/ConsultaE" >Consultar Expediente</button>
+  </div>
+  <!-- /card-container -->
+</div>
+<!-- /container -->

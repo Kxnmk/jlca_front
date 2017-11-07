@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-2" *ngIf="Uevents.length > 0">
+      <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action bg-danger text-white">
+          Urgente
+        </button>
+        <button type="button" class="list-group-item list-group-item-action" *ngFor="let CE of Uevents; let i = index">{{CE.title}}
+          <br>Fecha:{{CE.start.getDate()}}/{{CE.start.getMonth()}}/{{CE.start.getFullYear()}}</button>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="row">
+        <div class="col-xl-8">
+          <div class="btn-group">
+            <div
+              class="btn btn-primary"
+              mwlCalendarPreviousView
+              view="month"
+              [(viewDate)]="viewDate">
+              Anterior
+            </div>
+            <div
+              class="btn btn-secondary"
+              mwlCalendarToday
+              [(viewDate)]="viewDate">
+              Hoy
+            </div>
+            <div
+              class="btn btn-primary"
+              mwlCalendarNextView
+              view="month"
+              [(viewDate)]="viewDate">
+              Siguiente
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-right">
+          <h3>{{ viewDate | calendarDate:'monthViewTitle':'es' }}</h3>
+        </div>
+      </div>
+      <br>
+
+      <div [ngSwitch]="view">
+        <mwl-calendar-month-view
+          *ngSwitchCase="'month'"
+          [viewDate]="viewDate"
+          [events]="events"
+          [locale]="locale"
+          (dayClicked)="dayClicked($event.day)"
+          (beforeViewRender)="beforeMonthViewRender($event)">
+        </mwl-calendar-month-view>
+      </div>
+    </div>
+
+    
+
+    <div class="col col-sm-3">
+      <div class="card">
+        <div class="card-header card-inverse card-primary text-white">
+          <p *ngIf="clickedDate">{{ clickedDate | calendarDate:'dayViewTitle':'es' }}</p>
+        </div>
+        <div class="card-block">
+          <mwl-calendar-day-view [viewDate]="clickedDate" [events]="events" [hourSegments]="1" [dayStartHour]="6" [dayEndHour]="20">
+          </mwl-calendar-day-view>
+        </div>
+      </div>
+    </div>
+  </div>

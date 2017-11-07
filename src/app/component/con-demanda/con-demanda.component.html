@@ -1,0 +1,119 @@
+<div class="container-fluid">
+  <div class="align-items-center text-center container separacion bg-W space_form">
+    <div class="row justify-content-end">
+      <div class="col-10">
+        <p class="h1">Consultar Demanda</p>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" routerLink="/Login">Regresar</button>
+      </div>
+    </div>
+
+    <div class="divider card-primary"></div>
+
+    <div class="container separacion">
+      <form>
+        <div class="form-group row">
+          <label for="folioDemanda" class="col-sm-2 form-control-label">Folio</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="folioDemanda" placeholder="Folio Demanda" readonly>
+          </div>
+          <div class="col col-lg-1">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-Folio">
+              Buscar
+            </button>
+          </div>
+        </div>
+
+        <!--Estructura Modal Demandado-->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="busquedaFolio" aria-hidden="true" id="modal-Folio">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Buscar Folio</h5>
+              </div>
+
+              <div class="modal-body row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-8 col-sm-9 input-group">
+                      <span class="input-group-addon">Folio</span>
+                      <input type="text" class="form-control" aria-label="Buscar Actor">
+                    </div>
+                    <div class="col-4 col-sm-3">
+                      <button type="button" class="btn btn-primary">Buscar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Seleccionar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Termina Estructura-->
+
+        <div class="form-group row">
+          <label for="actorDemanda" class="col-sm-2 form-control-label">Actor</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="actorDemanda" placeholder="Nombre Actor" readonly>
+          </div>
+
+        </div>
+
+        <div class="form-group row">
+          <label for="demandadoDemanda" class="col-sm-2 form-control-label">Demandado</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="demandadoDemanda" placeholder="Nombre Demandado" readonly>
+          </div>
+          <div class="col col-lg-1">
+
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="ciudadDemanda" class="col-sm-2 form-control-label">Ciudad</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="ciudadDemanda" placeholder="Ciudad" readonly>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="tipoDemanda" class="col-sm-2 form-control-label">Tipo</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="tipoDemanda" placeholder="Tipo" readonly>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="tipoDemanda" class="col-sm-2 form-control-label">Estado</label>
+          <div class="col col-lg-4">
+            <input type="text" class="form-control" id="estadoDemanda" placeholder="Estado" readonly>
+          </div>
+          <div class="col col-lg-3">
+            <input type="text" class="form-control" id="fechaDemanda" placeholder="Fecha Estado" readonly>
+          </div>
+        </div>
+      </form>
+
+      <div class="row justify-content-end container">
+        <div class="col-4">
+          <button type="button" class="btn btn-primary" disabled>Subir Documento</button>
+        </div>
+      </div>
+      
+      <div class="card separacion ">
+        <div class="card-header card-inverse card-primary ">
+          <p class="h2 text-white">Archivos</p>
+        </div>
+        <div class="card-block">
+      
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
