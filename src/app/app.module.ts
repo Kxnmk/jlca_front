@@ -13,22 +13,22 @@ import { ExternalConsComponent } from './component/external-cons/external-cons.c
 
 import { FormsModule } from '@angular/forms';
 
-//Calendario
+// Calendario
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
 
-//Auth
+// Auth
 import { AuthService } from './services/auth/auth.service';
 import { GuardAuthService } from './services/auth/guard-auth.service'
 
-//Alerts
+// Alerts
 import { JasperoAlertsModule } from '@jaspero/ng2-alerts';
 import { ConDemandaComponent } from './component/con-demanda/con-demanda.component';
 
-//Permisos
+// Permisos
 import { PermisosService } from './services/permisos/permisos.service';
 
-//Catalogos
+// Catalogos
 import { ActoresComponent } from './component/catalogos/actores/actores.component';
 import { DemandadoComponent } from './component/catalogos/demandado/demandado.component';
 import { UsuariosComponent } from './component/catalogos/usuarios/usuarios.component';
@@ -68,7 +68,7 @@ import { HttpClientModule } from '@angular/common/http';
     JasperoAlertsModule,
     HttpClientModule
   ],
-  exports:[],
+  exports: [ ],
   providers: [
     AuthService,
     GuardAuthService,

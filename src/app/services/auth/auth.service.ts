@@ -1,8 +1,16 @@
-import { Injectable } from '@angular/core';
-import { Usuario } from '../../interfaces/usuario';
-
+import { Usuario } from './../../interfaces/usuario';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable } from 'rxjs/Observable';
+
+
+import { UrlServ } from '../../global-setting';
+
+import { Router } from '@angular/router';
+//Alerts
+import { AlertsService } from '@jaspero/ng2-alerts';
+import { Alert_settings } from '../../global-setting';
 
 
 
@@ -10,64 +18,51 @@ import { Observable } from 'rxjs/Observable';
 export class AuthService {
   state: boolean;
   usuarios: Usuario[];
+  uLog: Usuario[];
+  private url;
 
-  private url: string = 'http://localhost:8080/api/usuarios';
+  constructor(private _http: HttpClient, private router: Router, private _alert: AlertsService) {
+    this.state = false;
+  }
+
+
   isLoggedIn() {
-    if (sessionStorage.getItem('Session')){
+    if (sessionStorage.getItem('User')) {
       this.state = true;
     }
     return this.state;
   }
 
-  login(usuario, password) {
-    this.state = false;
-    this.initUsers();
-    //console.log(this.checkLogin(usuario, password));
 
-     const exist = this.usuarios.forEach((u) => {
-      if (u.user === usuario && u.pass === password) {
-        this.state = true;
-        sessionStorage.setItem('Session', usuario);
-        sessionStorage.setItem('Rol', u.rol);
-      }
-    });
+  login(usuario, password){
+    const cred = { usrName: usuario, usrPassword: password};
+
+    console.log(UrlServ + '/usuarios/auth');
+    this._http.post<Usuario[]>(UrlServ + '/usuarios/auth', cred).subscribe(
+      data => {
+        if (data.length !== 0) {
+          this.uLog = data;
+          console.log(this.uLog);
+          sessionStorage.setItem('User', JSON.stringify(this.uLog[0]));
+          this.router.navigate(['/Home']);
+        }else {
+          this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
+        }
+      },
+      err => {
+        console.log(err);
+        this._alert.create('error', 'Error en el servidor');
+      });
   }
 
-  checkLogin(usuario, password): Observable<Usuario> {
-    return this.http.get<Usuario>(this.url);
-  }
+
 
   logOut() {
     this.state = false;
-    sessionStorage.removeItem('Session');
-    sessionStorage.removeItem('Rol');
+    sessionStorage.removeItem('User');
   }
 
 
-  initUsers() {
-    // this.http.get('/api/items').subscribe(data => {
-    //   // Read the result field from the JSON response.
-    //   console.log(data);
-    // });
-    if (this.usuarios === undefined) {
-      this.usuarios = [
-        { user: 'admin', pass: '1234', rol: 'ADMIN' },
-        { user: 'oficialia', pass: '2345', rol: 'OFI_CIA' },
-        { user: 'radicacion', pass: '1234', rol: 'RAD_ICA' },
-        { user: 'mesa', pass: '1234', rol: 'MES_A' },
-        { user: 'actuario', pass: '1234', rol: 'ACT_ARIO' },
-        { user: 'proyectista', pass: '1234', rol: 'PRO_ECTA' },
-        { user: 'pleno', pass: '1234', rol: 'PLENO' },
-      ];
-    }
-  }
-
-  constructor(public http: HttpClient) {
-    // this.http.get(this.url).subscribe(data => {
-    //   console.log(data);
-    // });
-
-  }
 
 }
 

@@ -33,12 +33,12 @@
           </button>
           <div class="dropdown-menu">
             <h6 class="dropdown-header">Catalogos</h6>
-            <a class="dropdown-item" href="#">Actores</a>
-            <a class="dropdown-item" href="#">Demandados</a>
-            <a class="dropdown-item" href="#">Mesas</a>
+            <a class="dropdown-item" routerLink="/Actores">Actores</a>
+            <a class="dropdown-item" routerLink="/Demandado">Demandados</a>
+            <a class="dropdown-item" routerLink="/Mesas">Mesas</a>
             <div class="dropdown-divider" *ngIf="permission1"></div>
             <h6 class="dropdown-header" *ngIf="permission1">Administracion</h6>
-            <a class="dropdown-item" href="#" *ngIf="this.permission1">Usuarios</a>
+            <a class="dropdown-item" routerLink="/Usuarios" *ngIf="this.permission1">Usuarios</a>
           </div>
         </div>
         <!-- Fin Dropdown-->

@@ -5,9 +5,11 @@ interface AlertSettings {
     duration?: number;
 }
 
-export var Alert_settings: AlertSettings = {
+export let Alert_settings: AlertSettings = {
     overlay: true,
     overlayClickToClose: true,
     showCloseButton: true,
     duration: 5000
-}
+};
+
+export const UrlServ = 'http://localhost:3000/api';

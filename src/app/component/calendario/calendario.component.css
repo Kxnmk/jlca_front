@@ -22,3 +22,20 @@ container {
     border-radius: 3px;
     box-shadow: 3px 3px grey;
 }
+
+/* Por debajo de 700px */
+@media screen and (max-width: 800px){
+    body{
+        font-size:1.5em;
+    }
+    ue-list{
+        width: 200px;
+
+    }
+}
+/* Por debajo de 400px */
+@media screen and (max-width: 400px){
+    body{
+        font-size:10px;
+    }
+}

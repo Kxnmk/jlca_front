@@ -35,42 +35,42 @@ export class CalendarioComponent implements OnInit {
     {
       title: 'Evento 1',
       color: colors.blue,
-      start: new Date("2017-10-21T15:00:00")
+      start: new Date('2017-11-21T15:00:00')
     },
     {
       title: 'Evento 2',
       color: colors.red,
-      start: new Date("2017-10-16T10:00:00")
+      start: new Date('2017-11-16T10:00:00')
     },
     {
       title: 'Evento 2.1',
       color: colors.blue,
-      start: new Date("2017-10-16T15:00:00")
+      start: new Date('2017-11-16T15:00:00')
     },
     {
       title: 'Evento 2.2',
       color: colors.yellow,
-      start: new Date("2017-10-16T09:00:00")
+      start: new Date('2017-11-16T09:00:00')
     },
     {
       title: 'Evento 3',
       color: colors.blue,
-      start: new Date("2017-10-4T17:00:00")
+      start: new Date('2017-11-4T17:00:00')
     },
     {
       title: 'Evento 4',
       color: colors.blue,
-      start: new Date("2017-10-10T09:00:00")
+      start: new Date('2017-11-10T09:00:00')
     },
     {
       title: 'Folio 2017/03C',
       color: colors.red,
-      start: new Date("2017-10-27T10:00:00")
+      start: new Date('2017-11-27T10:00:00')
     },
     {
       title: 'Folio 2017/04C',
       color: colors.red,
-      start: new Date("2017-10-27T11:00:00")
+      start: new Date('2017-11-27T11:00:00')
     }
   ];
 
@@ -78,12 +78,12 @@ export class CalendarioComponent implements OnInit {
     {
       title: 'Folio 2017/03C',
       color: colors.red,
-      start: new Date("2017-09-27T10:00:00")
+      start: new Date('2017-11-27T10:00:00')
     },
     {
       title: 'Folio 2017/04C',
       color: colors.red,
-      start: new Date("2017-09-27T11:00:00")
+      start: new Date('2017-11-27T11:00:00')
     },
   ]
 

@@ -54,9 +54,19 @@ const APP_ROUTES: Routes = [
         component: ArchivosComponent
     },
     {
-        path: 'Audiencia',
+        path: 'Audiencias',
         canActivate: [GuardAuthService],
         component: AudienciasComponent
+    },
+    {
+        path: 'Mesas',
+        canActivate: [GuardAuthService],
+        component: MesasComponent
+    },
+    {
+        path: 'Usuarios',
+        canActivate: [GuardAuthService],
+        component: UsuariosComponent
     },
     { path: '**', pathMatch: 'full', redirectTo: 'Login' }
 ];
