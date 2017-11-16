@@ -41,6 +41,8 @@ import { RolesComponent } from './component/catalogos/roles/roles.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

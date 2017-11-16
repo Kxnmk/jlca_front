@@ -21,25 +21,11 @@ export class LoginComponent implements OnInit {
 
   }
 
-  onLogin(f: NgForm){
+  onLogin(f: NgForm) {
     const user = f.value.Usuario;
     const pass = f.value.Password;
 
     this.auth.login(user, pass);
-
-    // if (this.auth.isLoggedIn()) {
-    //   this.router.navigate(['/Home']);
-    // }else {
-    //   this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
-    // }
-
-    // this.auth.login(user, pass).subscribe(state => {
-    //   if (state) {
-    //     this.router.navigate(['/Home']);
-    //   }else {
-    //     this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
-    //   }
-    // });
   }
 
   ngOnInit() {
