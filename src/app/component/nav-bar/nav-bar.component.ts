@@ -18,18 +18,19 @@ export class NavBarComponent implements OnInit {
   permission1:boolean = false;
 
 
-  constructor(private router: Router, private auth: AuthService, private _alert: AlertsService) { 
-    this.userRol = sessionStorage.getItem("Rol");
-    if (this.userRol == "ADMIN") {
+  constructor(private router: Router, private auth: AuthService, private _alert: AlertsService) {
+    const rol = JSON.parse(sessionStorage.getItem('User'));
+    this.userRol = rol[0].RolNombre;
+    console.log(rol);
+    if (this.userRol === 'ADMIN') {
       this.permission1 = true;
     }
   }
 
-  onLogout(){
+  onLogout() {
     this.auth.logOut();
-    this._alert.create('success', "Haz cerrado sesion", Alert_settings);
+    this._alert.create('success', 'Haz cerrado sesion', Alert_settings);
     this.router.navigate(['/login']);
-    
   }
 
   ngOnInit() {
