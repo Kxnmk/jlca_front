@@ -43,7 +43,7 @@ export class AuthService {
         if (data.length !== 0) {
           this.uLog = data;
           console.log(this.uLog);
-          sessionStorage.setItem('User', JSON.stringify(this.uLog[0]));
+          sessionStorage.setItem('User', JSON.stringify(this.uLog));
           this.router.navigate(['/Home']);
         }else {
           this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);

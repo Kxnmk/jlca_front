@@ -31,7 +31,7 @@ export class GuardAuthService implements CanActivate {
       }
       if (stateURL.url === u.name) {
         const urlA = u.roles.forEach((a) => {
-          if (rol.usrRol === a) {
+          if (rol[0].RolNombre === a) {
             AccURL = true;
           }
         });
