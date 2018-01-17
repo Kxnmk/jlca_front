@@ -37,6 +37,9 @@ import { AudienciasComponent } from './component/audiencias/audiencias.component
 import { MesasComponent } from './component/catalogos/mesas/mesas.component';
 import { RolesComponent } from './component/catalogos/roles/roles.component';
 
+// Servicios-Catalogos
+import { UsuariosService } from './services/catalogos/usuarios.service';
+
 // HTTP Request
 import { HttpClientModule } from '@angular/common/http';
 
@@ -74,7 +77,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     AuthService,
     GuardAuthService,
-    PermisosService
+    PermisosService,
+    UsuariosService
   ],
   bootstrap: [AppComponent]
 })

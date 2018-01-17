@@ -24,7 +24,7 @@ container {
 }
 
 /* Por debajo de 700px */
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){
     body{
         font-size:1.5em;
     }
@@ -32,10 +32,10 @@ container {
         width: 200px;
 
     }
-}
+} */
 /* Por debajo de 400px */
-@media screen and (max-width: 400px){
+/* @media screen and (max-width: 400px){
     body{
         font-size:10px;
     }
-}
+} */

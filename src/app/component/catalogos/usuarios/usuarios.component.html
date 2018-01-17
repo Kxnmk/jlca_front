@@ -1,3 +1,211 @@
-<p>
-  usuarios works!
-</p>
+<div class="container-fluid">
+  <div class="align-items-center text-center container separacion bg-W space_form">
+    <div class="row justify-content-end">
+      <div class="col-10">
+        <p class="h1">Usuarios</p>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" routerLink="/Home">Regresar</button>
+      </div>
+    </div>
+
+    <div class="divider card-primary"></div>
+
+    <div class="container separacion">
+      
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#todos" role="tab">Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#oficialia" role="tab">Oficialia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#radicaciones" role="tab">Radicaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#mesa" role="tab">Mesa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#actuario" role="tab">Actuario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#proyectista" role="tab">Proyectista</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#pleno" role="tab">Pleno</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary btn-agregar">Agregar Usuario</button>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="todos" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of usuarios; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="oficialia" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uOfi; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="radicaciones" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uRad; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="mesa" role="tabpanel"> 
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uMesa; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="actuario" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uAct; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="proyectista" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uProy; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+        <div class="tab-pane" id="pleno" role="tabpanel">
+          <!-- User Table -->
+          <div class="container">
+            <div class='user-table usuarios-five-column row'>
+              <!-- User card -->
+              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uPleno; let i = index">
+                <div class="usuario-name">
+                  <p>{{usuario.usrNombre}}</p>
+                </div>
+                <ul>
+                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
+                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
+                </ul>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
+                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                </div>
+              </div>
+              <!-- End user card   -->
+            </div>
+          </div>
+          <!-- End User table -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -9,4 +9,5 @@ export interface Usuario {
     usrName: string;
     usrPassword: string;
     usrRandom: string;
+    RolNombre: string;
 }
