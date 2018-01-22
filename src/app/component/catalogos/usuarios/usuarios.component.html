@@ -48,18 +48,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of usuarios; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of usuarios; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' routerLink="./user">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a routerLink="./user" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>
@@ -71,18 +81,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uOfi; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uOfi; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' routerLink="/user">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>
@@ -94,18 +114,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uRad; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uRad; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' routerLink="/user">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>
@@ -117,19 +147,30 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uMesa; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uMesa; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' routerLink="/user">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
+              
               <!-- End user card   -->
             </div>
           </div>
@@ -140,18 +181,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uAct; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uAct; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' routerLink="/user">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>
@@ -163,18 +214,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uProy; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uProy; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' href="#">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a href="#" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>
@@ -186,18 +247,28 @@
           <div class="container">
             <div class='user-table usuarios-five-column row'>
               <!-- User card -->
-              <div class="usuario col-sm-3 col-lg-3" *ngFor="let usuario of uPleno; let i = index">
-                <div class="usuario-name">
-                  <p>{{usuario.usrNombre}}</p>
-                </div>
-                <ul>
-                  <li class="usuario-data">{{usuario.RolDescripcion}}</li>
-                  <li class="usuario-data">UsrName: {{usuario.usrName}}</li>
-                </ul>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-success btn-sm">Modificar</button>
-                  <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                </div>
+              <div class="row col-md-10 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Rol</th>
+                      <th class="text-center">Usuario</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let usuario of uPleno; let i = index">
+                    <td>{{usuario.usrNombre}}</td>
+                    <td>{{usuario.RolDescripcion}}</td>
+                    <td>{{usuario.usrName}}</td>
+                    <td class="text-center">
+                      <a class='btn btn-info btn-xs' href="#">
+                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                      <a href="#" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <!-- End user card   -->
             </div>

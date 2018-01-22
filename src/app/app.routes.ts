@@ -18,7 +18,8 @@ import { UsuariosComponent } from './component/catalogos/usuarios/usuarios.compo
 import { ArchivosComponent } from './component/archivos/archivos.component';
 import { AudienciasComponent } from './component/audiencias/audiencias.component';
 import { MesasComponent } from './component/catalogos/mesas/mesas.component';
-import { RolesComponent } from './component/catalogos/roles/roles.component'
+import { RolesComponent } from './component/catalogos/roles/roles.component';
+import { ModUsuarioComponent } from './component/catalogos/usuarios/mod-usuario/mod-usuario.component';
 
 const APP_ROUTES: Routes = [
     { path: 'Login', component: LoginComponent },
@@ -66,7 +67,11 @@ const APP_ROUTES: Routes = [
     {
         path: 'Usuarios',
         canActivate: [GuardAuthService],
-        component: UsuariosComponent
+        component: UsuariosComponent,
+        canActivateChild: [GuardAuthService],
+        children: [
+            { path: 'Usuarios/user', component: ModUsuarioComponent }
+        ]
     },
     { path: '**', pathMatch: 'full', redirectTo: 'Login' }
 ];

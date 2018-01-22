@@ -19,7 +19,7 @@ import { CalendarModule } from 'angular-calendar';
 
 // Auth
 import { AuthService } from './services/auth/auth.service';
-import { GuardAuthService } from './services/auth/guard-auth.service'
+import { GuardAuthService } from './services/auth/guard-auth.service';
 
 // Alerts
 import { JasperoAlertsModule } from '@jaspero/ng2-alerts';
@@ -37,11 +37,15 @@ import { AudienciasComponent } from './component/audiencias/audiencias.component
 import { MesasComponent } from './component/catalogos/mesas/mesas.component';
 import { RolesComponent } from './component/catalogos/roles/roles.component';
 
+// Movimientos Catalogos
+import { ModUsuarioComponent } from './component/catalogos/usuarios/mod-usuario/mod-usuario.component';
+
 // Servicios-Catalogos
 import { UsuariosService } from './services/catalogos/usuarios.service';
 
 // HTTP Request
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -63,6 +67,7 @@ import { HttpClientModule } from '@angular/common/http';
     AudienciasComponent,
     MesasComponent,
     RolesComponent,
+    ModUsuarioComponent,
   ],
   imports: [
     BrowserModule,

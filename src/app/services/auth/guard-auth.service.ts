@@ -6,14 +6,18 @@ import { Router, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/rou
 // Alerts
 import { AlertsService } from '@jaspero/ng2-alerts';
 import { Alert_settings } from '../../global-setting';
+import { CanActivateChild } from '@angular/router/src/interfaces';
 
 @Injectable()
-export class GuardAuthService implements CanActivate {
+export class GuardAuthService implements CanActivate, CanActivateChild {
 
   urlAcc: UrlAccess[];
 
   constructor(private authService: AuthService, private router: Router, private _alert: AlertsService) { }
 
+  canActivateChild(route: ActivatedRouteSnapshot, stateURL: RouterStateSnapshot) {
+    return true;
+  }
   canActivate(route: ActivatedRouteSnapshot, stateURL: RouterStateSnapshot) {
     const state = this.authService.isLoggedIn();
     console.log('canactivate' + stateURL.url);
