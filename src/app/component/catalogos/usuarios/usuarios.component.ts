@@ -29,7 +29,9 @@ export class UsuariosComponent implements OnInit {
       data => {
         if (data.length !== 0) {
           this.usuarios = data;
+          this.userSer.recivedata(data);
           this.assignUsers();
+          console.log(data);
         } else {
           this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
         }
@@ -44,35 +46,12 @@ export class UsuariosComponent implements OnInit {
   }
 
   assignUsers() {
-    this.usuarios.forEach((u) => {
-      switch (u.RolNombre) {
-        case 'PLENO': {
-          this.uPleno.push(u);
-          break;
-        }
-        case 'OFI_CIA': {
-          this.uOfi.push(u);
-          break;
-        }
-        case 'RAD_ICA': {
-          this.uRad.push(u);
-          break;
-        }
-        case 'MES_A': {
-          this.uMesa.push(u);
-          break;
-        }
-        case 'ACT_ARIO': {
-          this.uAct.push(u);
-          break;
-        }
-        case 'PRO_ECTA': {
-          this.uProy.push(u);
-          break;
-        }
-      }
-
-    });
+    this.uOfi = this.userSer.uOfi;
+    this.uRad = this.userSer.uRad;
+    this.uMesa = this.userSer.uMesa;
+    this.uAct = this.userSer.uAct;
+    this.uProy = this.userSer.uProy;
+    this.uPleno = this.userSer.uPleno;
   }
 
 }

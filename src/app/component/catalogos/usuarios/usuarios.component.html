@@ -91,17 +91,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uOfi; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'OFI_CIA')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               <!-- End user card   -->
@@ -124,17 +126,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uRad; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'RAD_ICA')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               <!-- End user card   -->
@@ -157,17 +161,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uMesa; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'MES_A')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               
@@ -191,17 +197,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uAct; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'ACT_ARIO')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               <!-- End user card   -->
@@ -209,6 +217,7 @@
           </div>
           <!-- End User table -->
         </div>
+
         <div class="tab-pane" id="proyectista" role="tabpanel">
           <!-- User Table -->
           <div class="container">
@@ -224,17 +233,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uProy; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'PRO_ECTA')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               <!-- End user card   -->
@@ -242,6 +253,8 @@
           </div>
           <!-- End User table -->
         </div>
+        
+        <!-- ready -->
         <div class="tab-pane" id="pleno" role="tabpanel">
           <!-- User Table -->
           <div class="container">
@@ -257,17 +270,19 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tr *ngFor="let usuario of uPleno; let i = index">
-                    <td>{{usuario.usrNombre}}</td>
-                    <td>{{usuario.RolDescripcion}}</td>
-                    <td>{{usuario.usrName}}</td>
-                    <td class="text-center">
-                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
-                        <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
-                        <span class="glyphicon glyphicon-remove"></span> Borrar</a>
-                    </td>
-                  </tr>
+                  <ng-container *ngFor="let usuario of usuarios; let i = index">
+                    <tr *ngIf="(usuario.RolNombre == 'PLENO')">
+                      <td>{{usuario.usrNombre}}</td>
+                      <td>{{usuario.RolDescripcion}}</td>
+                      <td>{{usuario.usrName}}</td>
+                      <td class="text-center">
+                        <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
+                          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+                        <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
+                          <span class="glyphicon glyphicon-remove"></span> Borrar</a>
+                      </td>
+                    </tr>
+                  </ng-container>
                 </table>
               </div>
               <!-- End user card   -->
