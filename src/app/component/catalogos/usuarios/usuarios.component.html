@@ -37,7 +37,7 @@
           <a class="nav-link" data-toggle="tab" href="#pleno" role="tab">Pleno</a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-primary btn-agregar">Agregar Usuario</button>
+          <button type="button" routerLink="./add" class="btn btn-primary btn-agregar" >Agregar Usuario</button>
         </li>
       </ul>
       
@@ -63,9 +63,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' routerLink="./user">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', i]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a routerLink="./user" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', i]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -96,9 +96,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' routerLink="/user">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -129,9 +129,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' routerLink="/user">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -162,9 +162,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' routerLink="/user">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -196,9 +196,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' routerLink="/user">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a routerLink="/user" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -229,9 +229,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' href="#">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a href="#" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>
@@ -262,9 +262,9 @@
                     <td>{{usuario.RolDescripcion}}</td>
                     <td>{{usuario.usrName}}</td>
                     <td class="text-center">
-                      <a class='btn btn-info btn-xs' href="#">
+                      <a class='btn btn-info btn-xs' [routerLink]="['./edit', index]">
                         <span class="glyphicon glyphicon-edit"></span> Editar</a>
-                      <a href="#" class="btn btn-danger btn-xs">
+                      <a [routerLink]="['./delete', index]" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-remove"></span> Borrar</a>
                     </td>
                   </tr>

@@ -84,7 +84,7 @@ export class GuardAuthService implements CanActivate, CanActivateChild {
         {
           name: '/Usuarios',
           roles: ['ADMIN', 'PLENO']
-        },
+        }
       ];
     }
   }

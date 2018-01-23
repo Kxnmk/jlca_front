@@ -68,10 +68,18 @@ const APP_ROUTES: Routes = [
         path: 'Usuarios',
         canActivate: [GuardAuthService],
         component: UsuariosComponent,
-        canActivateChild: [GuardAuthService],
-        children: [
-            { path: 'Usuarios/user', component: ModUsuarioComponent }
-        ]
+    },
+    {
+        path: 'Usuarios/edit/:id',
+        component: ModUsuarioComponent
+    },
+    {
+        path: 'Usuarios/delete/:id',
+        component: ModUsuarioComponent
+    },
+    {
+        path: 'Usuarios/add',
+        component: ModUsuarioComponent
     },
     { path: '**', pathMatch: 'full', redirectTo: 'Login' }
 ];
