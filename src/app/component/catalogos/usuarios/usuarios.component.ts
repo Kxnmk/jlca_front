@@ -3,7 +3,7 @@ import { UsuariosService } from '../../../services/catalogos/usuarios.service';
 import { Usuario } from '../../../interfaces/usuario';
 
 import { HttpClient } from '@angular/common/http';
-//Alerts
+// Alerts
 import { AlertsService } from '@jaspero/ng2-alerts';
 import { Alert_settings } from '../../../global-setting';
 
@@ -17,12 +17,6 @@ import { UrlServ } from '../../../global-setting';
 export class UsuariosComponent implements OnInit {
 
   usuarios: Usuario[] = [];
-  uOfi: Usuario[] = [];
-  uRad: Usuario[] = [];
-  uMesa: Usuario[] = [];
-  uAct: Usuario[] = [];
-  uProy: Usuario[] = [];
-  uPleno: Usuario[] = [];
 
   constructor(private userSer: UsuariosService, private _http: HttpClient, private _alert: AlertsService) {
     this._http.get<Usuario[]>(UrlServ + '/usuarios').subscribe(
@@ -30,8 +24,6 @@ export class UsuariosComponent implements OnInit {
         if (data.length !== 0) {
           this.usuarios = data;
           this.userSer.recivedata(data);
-          this.assignUsers();
-          console.log(data);
         } else {
           this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
         }
@@ -45,13 +37,5 @@ export class UsuariosComponent implements OnInit {
   ngOnInit() {
   }
 
-  assignUsers() {
-    this.uOfi = this.userSer.uOfi;
-    this.uRad = this.userSer.uRad;
-    this.uMesa = this.userSer.uMesa;
-    this.uAct = this.userSer.uAct;
-    this.uProy = this.userSer.uProy;
-    this.uPleno = this.userSer.uPleno;
-  }
 
 }
