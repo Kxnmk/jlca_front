@@ -13,126 +13,120 @@
     <div class="divider card-primary"></div>
 
     <div class="container separacion">
-      <form>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="form-group row">
-          <label for="folioDemanda" class="col-sm-2 form-control-label">Folio</label>
-          <div class="col col-lg-4">
-            <input type="text" class="form-control" id="folioDemanda" placeholder="Folio Demanda">
-          </div>
-          <div class="col col-lg-1">
-            <button type="button" class="btn btn-primary" hidden>Buscar</button>
+          <div class="col-6 col-sm-5 offset-sm-2 offset-col-3 input-group">
+            <span class="input-group-addon">Folio</span>
+            <input name="folioD" type="text" class="form-control" ngModel placeholder="Folio Demanda">
+            
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="actorDemanda" class="col-sm-2 form-control-label">Actor</label>
-          <div class="col col-lg-4">
-            <input type="text" class="form-control" id="actorDemanda" placeholder="Seleccionar Actor" readonly>
-          </div>
-          <div class="col col-lg-1">
-
+          <div class="col-6 col-sm-5 offset-sm-2 offset-col-3 input-group">
+            <span class="input-group-addon">Actor</span>
+            <input name="actorD" type="text" class="form-control" ngModel placeholder="Actor" readonly>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-Actor">
               Buscar
             </button>
-
-            <!--Estructura Modal Actor-->
-            <div class="modal fade" tabindex="-1" role="dialog"
-                aria-labelledby="busquedaautor" aria-hidden="true" id="modal-Actor">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Buscar Actor</h5>
-                  </div>
-
-                  <div class="modal-body row">
-                    <div class="col-sm-9">
-                      <div class="row">
-                        <div class="col-8 col-sm-9 input-group">
-                          <span class="input-group-addon">Actor</span>
-                          <input type="text" class="form-control" aria-label="Buscar Actor">
-                        </div>
-                        <div class="col-4 col-sm-3">
-                          <button type="button" class="btn btn-primary">Agregar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Seleccionar</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Termina Estructura-->
-
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="demandadoDemanda" class="col-sm-2 form-control-label">Demandado</label>
-          <div class="col col-lg-4">
-            <input type="text" class="form-control" id="demandadoDemanda" placeholder="Seleccionar Demandado" readonly>
-          </div>
-          <div class="col col-lg-1">
-
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-Demandado">
-              Buscar
+          <div class="col-6 col-sm-5 offset-sm-2 offset-col-3 input-group">
+            <span class="input-group-addon">Demandado</span>
+            <input name="demandadoD" type="text" class="form-control" ngModel placeholder="Demandado" readonly>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-Demandado"> Buscar
             </button>
-
-            <!--Estructura Modal Demandado-->
-            <div class="modal fade" tabindex="-1" role="dialog"
-                aria-labelledby="busquedaautor" aria-hidden="true" id="modal-Demandado">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Buscar Demandado</h5>
-                  </div>
-
-                  <div class="modal-body row">
-                    <div class="col-sm-12">
-                      <div class="row">
-                        <div class="col-8 col-sm-9 input-group">
-                          <span class="input-group-addon">Demandado</span>
-                          <input type="text" class="form-control" aria-label="Buscar Actor">
-                        </div>
-                        <div class="col-4 col-sm-3">
-                          <button type="button" class="btn btn-primary">Agregar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Seleccionar</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Termina Estructura-->
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="ciudadDemanda" class="col-sm-2 form-control-label">Ciudad</label>
-          <div class="col col-lg-4">
-            <input type="text" class="form-control" id="ciudadDemanda" placeholder="Ciudad">
+          <div class="col-6 col-sm-5 offset-sm-2 offset-col-3 input-group">
+            <span class="input-group-addon">Ciudad</span>
+            <input name="ciudadD" type="text" class="form-control" ngModel placeholder="Ciudad Demanda">
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="tipoDemanda" class="col-sm-2 form-control-label">Tipo</label>
-          <div class="col col-lg-4">
-            <input type="text" class="form-control" id="tipoDemanda" placeholder="Tipo">
+          <div class="col-6 col-sm-5 offset-sm-2 offset-col-3 input-group">
+            <span class="input-group-addon">Tipo</span>
+            <input name="tipoD" type="text" class="form-control" ngModel placeholder="Tipo">
           </div>
 
           <div class="col">
             <button type="button" class="btn btn-success">Guardar</button>
           </div>
+
         </div>
+    
       </form>
+        
+
+      <!-- Modales -->
+      <!--Estructura Modal Actor-->
+      <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="busquedaautor" aria-hidden="true" id="modal-Actor">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Buscar Actor</h5>
+            </div>
+      
+            <div class="modal-body row">
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-8 col-sm-9 input-group">
+                    <span class="input-group-addon">Actor</span>
+                    <input type="text" class="form-control" aria-label="Buscar Actor">
+                  </div>
+                  <div class="col-4 col-sm-3">
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Seleccionar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Termina Estructura Actor-->
+
+      <!--Estructura Modal Demandado-->
+      <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="busquedaautor" aria-hidden="true" id="modal-Demandado">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Buscar Demandado</h5>
+            </div>
+      
+            <div class="modal-body row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-8 col-sm-9 input-group">
+                    <span class="input-group-addon">Demandado</span>
+                    <input type="text" class="form-control" aria-label="Buscar Actor">
+                  </div>
+                  <div class="col-4 col-sm-3">
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Seleccionar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Termina Estructura Demandado-->
+
+      <!-- Termina Modales -->
 
 
 

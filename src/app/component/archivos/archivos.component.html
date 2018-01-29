@@ -1,3 +1,66 @@
-<p>
-  archivos works!
-</p>
+<div class="container-fluid">
+  <div class="align-items-center text-center container separacion bg-W space_form">
+    <div class="row justify-content-end">
+      <div class="col-10">
+        <p class="h1">Archivos</p>
+        <!-- <p class="h1" *ngIf="this.action === 'add'">Subir Archivo</p>
+        <p class="h1" *ngIf="this.action === 'edit'">Consultar Archivo Usuario</p> -->
+
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-danger" routerLink="/Usuarios">Regresar</button>
+      </div>
+    </div>
+
+    <div class="divider card-primary"></div>
+
+    <div class="container separacion align-items-center">
+
+
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-group row">
+          <div class="col-8 col-sm-8 offset-sm-2 input-group">
+            <span class="input-group-addon">Nombre</span>
+            <input id="nombreU" name="nombreU" type="text" class="form-control" ngModel placeholder="Nombre">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-8 col-sm-8 offset-sm-2 input-group">
+            <span class="input-group-addon">Usuario</span>
+            <input type="text" class="form-control" id="usuarioU" name="usuarioU" ngModel placeholder="Usuario">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-8 col-sm-8 offset-sm-2 input-group">
+            <span class="input-group-addon">Contraseña</span>
+            <input id="passU" name="passU" type="password" class="form-control" ngModel placeholder="Contraseña">
+          </div>
+        </div>
+
+
+        <div class="form-group row">
+          <div class="col-8 col-sm-8 offset-sm-2 input-group">
+            <span class="input-group-addon">Rol</span>
+            <select id="rolU" name="rolU" class="form-control" ngModel>
+              <option selected value="Seleccionar Rol">Seleccionar Rol</option>
+              <option *ngFor="let rol of roles; let i = index" value="{{i}}">
+                {{rol.RolDescripcion}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col">
+            <button type="submit" onclick="" class="btn btn-success">Guardar</button>
+          </div>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</div>
