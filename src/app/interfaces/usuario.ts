@@ -11,3 +11,13 @@ export interface Usuario {
     usrRandom: string;
     RolNombre: string;
 }
+
+export class UsuarioC {
+    usrClave: number;
+    usrNombre: string;
+    usrRol: number;
+    usrName: string;
+    usrPassword: string;
+    usrRandom: string;
+    RolNombre: string;
+}

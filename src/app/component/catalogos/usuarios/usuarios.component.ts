@@ -24,6 +24,7 @@ export class UsuariosComponent implements OnInit {
         if (data.length !== 0) {
           this.usuarios = data;
           this.userSer.recivedata(data);
+          this.userSer.getRoles();
         } else {
           this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
         }
