@@ -19,20 +19,12 @@ export class UsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
 
   constructor(private userSer: UsuariosService, private _http: HttpClient, private _alert: AlertsService) {
-    this._http.get<Usuario[]>(UrlServ + '/usuarios').subscribe(
-      data => {
-        if (data.length !== 0) {
-          this.usuarios = data;
-          this.userSer.recivedata(data);
-          this.userSer.getRoles();
-        } else {
-          this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
-        }
-      },
-      err => {
-        console.log(err);
-        this._alert.create('error', 'Error en el servidor');
-      });
+    this.usuarios = new Array<Usuario>();
+
+    const promise = new Promise((resolve, reject) => {
+      
+    });
+
   }
 
   ngOnInit() {

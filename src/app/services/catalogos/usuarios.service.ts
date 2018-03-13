@@ -20,6 +20,18 @@ export class UsuariosService {
 
 
   constructor(private _http: HttpClient, private _alert: AlertsService) {
+    this._http.get<Usuario[]>(UrlServ + '/usuarios').subscribe(
+      data => {
+        if (data.length !== 0) {
+          this.usuarios = data;
+        } else {
+          this._alert.create('error', 'Usuario o contraseña no valida intente de nuevo', Alert_settings);
+        }
+      },
+      err => {
+        console.log(err);
+        this._alert.create('error', 'Error en el servidor');
+      });
   }
 
   recivedata(users) {
